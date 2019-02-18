@@ -8,7 +8,7 @@ def commitCount(gitHubID):
         repoName = repo["name"]
         dict[repoName] = getCommits(gitHubID, repoName)
 
-    return commitCount
+    return dict
         
 
 def getRepositories(gitHubID):
