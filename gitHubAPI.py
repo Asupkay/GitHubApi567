@@ -25,4 +25,14 @@ def getCommits(gitHubID, repoName):
     print(data)
     return len(data)
 
-commitCount("Bsoong");
+class TestGitHubAPI(object):
+    def test_commitCount(self):
+        assert len(commitCount("bSoong")) > 0
+
+    def test_getRepos(self):
+        assert len(getRepositories("bSoong")) > 0
+
+    def test_getCommits(self):
+        assert getCommits('bSoong', 'Algorithms') > 0
+
+
